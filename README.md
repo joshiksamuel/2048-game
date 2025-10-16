@@ -1,16 +1,88 @@
-# React + Vite
+2048 Game — ReactJS Implementation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional and interactive 2048 game built using ReactJS with a clean and modern GUI interface.
+The goal is to combine tiles with the same number to reach 2048!
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧩 Features
 
-## React Compiler
+✅ Dynamic 4x4 grid board
+✅ Keyboard and GUI controls for movement (Up, Down, Left, Right)
+✅ Merge logic — identical tiles combine into one with their sum
+✅ Random tile spawning (2 or 4 after each move)
+✅ Score tracking based on merged tiles
+✅ Game Over when no moves are possible
+✅ Win detection when the player reaches 2048
+✅ Restart option from GUI
+✅ Responsive and animated UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Installation Guide
 
-## Expanding the ESLint configuration
+Follow the steps below to run this project locally 👇
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1️⃣ Clone the Repository
+git clone https://github.com/<your-username>/react-2048-game.git
+cd react-2048-game
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Start the Development Server
+npm start
+
+
+Then open your browser and navigate to:
+
+http://localhost:3000
+
+🧠 Gameplay Instructions
+
+🎯 Goal: Combine numbered tiles to reach 2048.
+
+Controls:
+
+⬆️ Up Arrow: Move tiles up
+
+⬇️ Down Arrow: Move tiles down
+
+⬅️ Left Arrow: Move tiles left
+
+➡️ Right Arrow: Move tiles right
+
+Each move:
+
+Slides all tiles in the chosen direction.
+
+Merges tiles with the same number.
+
+Adds a new random tile (2 or 4).
+
+Game ends when:
+
+The 2048 tile is created 🏆 (You win!)
+
+No more moves are possible ❌ (Game over)
+
+🧩 Implementation Details
+Board Initialization
+
+The default board size is 4x4.
+
+At the start, two random tiles (either 2 or 4) appear.
+
+Game Mechanics
+
+Movement is handled via keyboard events or GUI controls.
+
+After each valid move:
+
+Tiles merge when adjacent values match.
+
+A new tile (2 or 4) spawns in a random empty position.
+
+Score updates when tiles merge.
+
+Win/lose conditions are checked after each move.
+
+
+
